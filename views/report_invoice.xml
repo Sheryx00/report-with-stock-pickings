@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_invoice_with_stock_pickings" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[@class='row mt32 mb32']" position="after">
+            <t t-if="o.picking_ids">
+                <div class="row mt32 mb32" id="picking_ids">
+                    <div class="col auto mw-100 mb-2">
+                        <strong>Número de remito:</strong><p t-field="o.picking_ids"/>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>
