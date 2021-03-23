@@ -5,7 +5,10 @@
             <t t-if="o.picking_ids">
                 <div class="row mt32 mb32" id="picking_ids">
                     <div class="col auto mw-100 mb-2">
-                        <strong>Número de remito:</strong><p t-field="o.picking_ids"/>
+                        <strong>Número de remito:</strong>
+                        <p t-foreach="o.picking_ids" t-as="picking">
+                            <p><t t-esc="picking.name"/></p>
+                        </p>
                     </div>
                 </div>
             </t>
